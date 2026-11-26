@@ -1,0 +1,58 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P13_Sk1",
+   "offset": "80.4 mm"
+  }
+ },
+ {
+  "command": "sketch.slot.center_to_center",
+  "params": {
+   "p0": [
+    15.8645,
+    6.1089
+   ],
+   "p1": [
+    2.3783,
+    -53.7639
+   ],
+   "width": 7.0
+  }
+ },
+ {
+  "command": "sketch.circle.center",
+  "params": {
+   "center": [
+    15.8645,
+    6.1089
+   ],
+   "radius": 1.6
+  }
+ },
+ {
+  "command": "sketch.circle.center",
+  "params": {
+   "center": [
+    2.3783,
+    -53.7639
+   ],
+   "radius": 1.6
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P13_Sk1",
+   "distance": "2.5 mm",
+   "operation": "new",
+   "body_name": "P13_biela_sup",
+   "name": "P13_biela_sup"
+  }
+ }
+]

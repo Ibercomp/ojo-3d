@@ -1,0 +1,9 @@
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# SDK: NMI watchdog is incompatible with the PWM driver (GPIO12/14).
+# Keep the independent task watchdog enabled.
+# CONFIG_ESP8266_NMI_WDT is not set
+CONFIG_ESP_TASK_WDT=y
+CONFIG_ESP_TASK_WDT_PANIC=y

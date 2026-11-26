@@ -1,0 +1,467 @@
+[
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 20.0,
+   "width": 2.5,
+   "height": 34.0,
+   "center": [
+    0.0,
+    -24.95,
+    -5.5
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja1",
+   "name": "P05_Caja1"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 3.0,
+   "width": 58.2,
+   "height": 20.0,
+   "center": [
+    8.5,
+    2.9,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja2",
+   "name": "P05_Caja2"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Caja2"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 3.0,
+   "width": 58.2,
+   "height": 20.0,
+   "center": [
+    -8.5,
+    2.9,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja3",
+   "name": "P05_Caja3"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Caja3"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 20.0,
+   "width": 5.0,
+   "height": 16.0,
+   "center": [
+    0.0,
+    29.5,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja4",
+   "name": "P05_Caja4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Caja4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 12.8,
+   "width": 4.5,
+   "height": 23.4,
+   "center": [
+    0.0,
+    -24.95,
+    -5.4
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja5",
+   "name": "P05_Caja5"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Caja5"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 18.0,
+   "base": [
+    0.0,
+    -29.7,
+    8.5
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P05_Cil6",
+   "name": "P05_Cil6"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil6"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 18.0,
+   "base": [
+    0.0,
+    -29.7,
+    -19.3
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P05_Cil7",
+   "name": "P05_Cil7"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil7"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 10.05,
+   "height": 5.0,
+   "base": [
+    0.0,
+    28.0,
+    0.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P05_Cil8",
+   "name": "P05_Cil8"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil8"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 8.0,
+   "height": 0.7,
+   "base": [
+    0.0,
+    27.35,
+    0.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P05_Cil9",
+   "name": "P05_Cil9"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil9"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 13.8,
+   "width": 0.7,
+   "height": 8.0,
+   "center": [
+    0.0,
+    26.85,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja10",
+   "name": "P05_Caja10"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Caja10"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 8.1,
+   "width": 0.9,
+   "height": 8.1,
+   "center": [
+    0.0,
+    26.95,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja11",
+   "name": "P05_Caja11"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Caja11"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 6.0,
+   "height": 5.0,
+   "base": [
+    6.0,
+    0.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P05_Cil12",
+   "name": "P05_Cil12"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil12"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 5.0,
+   "base": [
+    6.0,
+    0.0,
+    8.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P05_Cil13",
+   "name": "P05_Cil13"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil13"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 5.0,
+   "base": [
+    6.0,
+    0.0,
+    -8.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P05_Cil14",
+   "name": "P05_Cil14"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil14"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 5.0,
+   "base": [
+    6.0,
+    8.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P05_Cil15",
+   "name": "P05_Cil15"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil15"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 5.0,
+   "base": [
+    6.0,
+    -8.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P05_Cil16",
+   "name": "P05_Cil16"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil16"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 3.2,
+   "height": 5.0,
+   "base": [
+    -11.0,
+    0.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P05_Cil17",
+   "name": "P05_Cil17"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Cil17"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 5.0,
+   "width": 5.0,
+   "height": 8.0,
+   "center": [
+    -8.5,
+    6.5,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P05_Caja18",
+   "name": "P05_Caja18"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P05_Caja1",
+   "tools": [
+    "P05_Caja18"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P05_Caja1",
+   "name": "P05_cuna"
+  }
+ }
+]

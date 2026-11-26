@@ -1,0 +1,14 @@
+Licencias de este repositorio
+=============================
+
+Diseño (piezas CAD, STEP, STL, proyectos SolidCraft .sc, planos, imágenes,
+perfiles de impresión y documentación):
+  Creative Commons Atribución 4.0 Internacional (CC BY 4.0)
+  Copyright (c) 2026 Ibercomp
+  https://creativecommons.org/licenses/by/4.0/legalcode.es
+
+  Puedes compartir y adaptar el material, también con fines comerciales,
+  siempre que cites a Ibercomp como autor e indiques si has hecho cambios.
+
+Código (firmware en C/C++, scripts de Python y de shell, herramientas):
+  Licencia MIT, texto completo en LICENSE-CODE.

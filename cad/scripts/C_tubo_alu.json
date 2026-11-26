@@ -1,0 +1,51 @@
+[
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 20.0,
+   "height": 300.0,
+   "base": [
+    3.5,
+    -328.0,
+    -89.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "C_t_Cil1",
+   "name": "C_t_Cil1"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 17.0,
+   "height": 302.0,
+   "base": [
+    3.5,
+    -329.0,
+    -89.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "C_t_Cil2",
+   "name": "C_t_Cil2"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "C_t_Cil1",
+   "tools": [
+    "C_t_Cil2"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "C_t_Cil1",
+   "name": "C_tubo_alu"
+  }
+ }
+]

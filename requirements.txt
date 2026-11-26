@@ -1,0 +1,8 @@
+numpy
+scipy
+trimesh
+manifold3d
+cadquery-ocp
+networkx
+matplotlib
+shapely

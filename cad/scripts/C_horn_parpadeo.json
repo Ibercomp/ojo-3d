@@ -1,0 +1,25 @@
+[
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 21.0,
+   "height": 1.8,
+   "base": [
+    83.3,
+    12.87,
+    -63.51
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "C_h_Cil1",
+   "name": "C_h_Cil1"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "C_h_Cil1",
+   "name": "C_horn_parpadeo"
+  }
+ }
+]

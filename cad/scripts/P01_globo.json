@@ -1,0 +1,520 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P01_Sk1"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     62.8331,
+     26.0
+    ],
+    [
+     61.098,
+     26.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -66.4
+    ],
+    [
+     0,
+     -68.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": "l2.end",
+   "end": "l1.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": "l1.end",
+   "end": "l2.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P01_Sk1",
+   "axis": "Z",
+   "angle": "360 deg",
+   "operation": "new",
+   "body_name": "P01_Casq2",
+   "name": "P01_Casq2"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P01_Sk3",
+   "offset": "-5.0 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     33.0,
+     12.0
+    ],
+    [
+     33.0,
+     -12.0
+    ],
+    [
+     46.6,
+     -25.6
+    ],
+    [
+     70.0,
+     -25.6
+    ],
+    [
+     70.0,
+     12.0
+    ],
+    [
+     33.0,
+     12.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P01_Sk3",
+   "distance": "10.0 mm",
+   "operation": "new",
+   "body_name": "P01_Ext4",
+   "name": "P01_Ext4"
+  }
+ },
+ {
+  "command": "solid.sphere",
+  "params": {
+   "radius": 67.0,
+   "center": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P01_Esf5",
+   "name": "P01_Esf5"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Ext4",
+   "tools": [
+    "P01_Esf5"
+   ],
+   "operation": "intersect"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Casq2",
+   "tools": [
+    "P01_Ext4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 9.6,
+   "width": 13.5091,
+   "height": 0.45,
+   "center": [
+    0.0,
+    53.5546,
+    -25.775
+   ],
+   "operation": "new",
+   "body_name": "P01_Caja6",
+   "name": "P01_Caja6"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Casq2",
+   "tools": [
+    "P01_Caja6"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P01_Sk7",
+   "offset": "-5.0 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -37.5,
+     12.0
+    ],
+    [
+     -37.5,
+     -12.0
+    ],
+    [
+     -51.1,
+     -25.6
+    ],
+    [
+     -70.0,
+     -25.6
+    ],
+    [
+     -70.0,
+     12.0
+    ],
+    [
+     -37.5,
+     12.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P01_Sk7",
+   "distance": "10.0 mm",
+   "operation": "new",
+   "body_name": "P01_Ext8",
+   "name": "P01_Ext8"
+  }
+ },
+ {
+  "command": "solid.sphere",
+  "params": {
+   "radius": 67.0,
+   "center": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P01_Esf9",
+   "name": "P01_Esf9"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Ext8",
+   "tools": [
+    "P01_Esf9"
+   ],
+   "operation": "intersect"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Casq2",
+   "tools": [
+    "P01_Ext8"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 9.6,
+   "width": 9.0091,
+   "height": 0.45,
+   "center": [
+    0.0,
+    -55.8046,
+    -25.775
+   ],
+   "operation": "new",
+   "body_name": "P01_Caja10",
+   "name": "P01_Caja10"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Casq2",
+   "tools": [
+    "P01_Caja10"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 58.3,
+   "height": 70.0,
+   "base": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "axis": "Z",
+   "operation": "new",
+   "body_name": "P01_Cil11",
+   "name": "P01_Cil11"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P01_Sk12",
+   "offset": "32.7 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     1.4142,
+     -1.4142
+    ],
+    [
+     0.6284,
+     -2.2
+    ],
+    [
+     -0.6284,
+     -2.2
+    ],
+    [
+     -1.4142,
+     -1.4142
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0.0,
+    0.0
+   ],
+   "start": "l3.end",
+   "end": "l1.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P01_Sk12",
+   "distance": "6.8 mm",
+   "operation": "new",
+   "body_name": "P01_Lagrima13",
+   "name": "P01_Lagrima13"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P01_Sk14",
+   "offset": "-69.0 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0.0,
+     -3.5
+    ],
+    [
+     3.5,
+     0.0
+    ],
+    [
+     0.0,
+     3.5
+    ],
+    [
+     -3.5,
+     0.0
+    ],
+    [
+     0.0,
+     -3.5
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P01_Sk14",
+   "distance": "31.8 mm",
+   "operation": "new",
+   "body_name": "P01_Ext15",
+   "name": "P01_Ext15"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 8.3,
+   "base": [
+    0.0,
+    -45.5,
+    -8.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P01_Cil16",
+   "name": "P01_Cil16"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 8.3,
+   "base": [
+    0.0,
+    -45.5,
+    8.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P01_Cil17",
+   "name": "P01_Cil17"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Cil11",
+   "tools": [
+    "P01_Lagrima13"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Cil11",
+   "tools": [
+    "P01_Ext15"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Cil11",
+   "tools": [
+    "P01_Cil16"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Cil11",
+   "tools": [
+    "P01_Cil17"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P01_Casq2",
+   "tools": [
+    "P01_Cil11"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P01_Casq2",
+   "name": "P01_globo"
+  }
+ }
+]

@@ -1,0 +1,1237 @@
+[
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 28.3,
+   "height": 42.0,
+   "base": [
+    3.5,
+    -340.0,
+    -89.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P15_Cil1",
+   "name": "P15_Cil1"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     9.4517,
+     -340.0,
+     -80.7781
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     -0.81,
+     0.0,
+     0.5864
+    ]
+   },
+   "name": "P15_Sec2"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -9.083
+    ],
+    [
+     0,
+     9.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     9.083
+    ],
+    [
+     10.1936,
+     9.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     12.1936,
+     7.083
+    ],
+    [
+     12.1936,
+     -7.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     10.1936,
+     -9.083
+    ],
+    [
+     0,
+     -9.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.1936,
+    7.083
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.1936,
+    -7.083
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     96.6159,
+     -340.0,
+     39.6346
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     -0.81,
+     0.0,
+     0.5864
+    ]
+   },
+   "name": "P15_Sec3"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -6.0
+    ],
+    [
+     0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     6.0
+    ],
+    [
+     3.0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     5.0,
+     4.0
+    ],
+    [
+     5.0,
+     -4.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     3.0,
+     -6.0
+    ],
+    [
+     0,
+     -6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    4.0
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    -4.0
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.loft",
+  "params": {
+   "sections": [
+    {
+     "sketch": "P15_Sec2"
+    },
+    {
+     "sketch": "P15_Sec3"
+    }
+   ],
+   "operation": "new",
+   "body_name": "P15_Pata4",
+   "name": "P15_Pata4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Pata4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     -2.4517,
+     -340.0,
+     -80.7781
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     -0.81,
+     0.0,
+     -0.5864
+    ]
+   },
+   "name": "P15_Sec5"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -9.083
+    ],
+    [
+     0,
+     9.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     9.083
+    ],
+    [
+     10.1936,
+     9.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     12.1936,
+     7.083
+    ],
+    [
+     12.1936,
+     -7.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     10.1936,
+     -9.083
+    ],
+    [
+     0,
+     -9.083
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.1936,
+    7.083
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.1936,
+    -7.083
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     -89.6159,
+     -340.0,
+     39.6346
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     -0.81,
+     0.0,
+     -0.5864
+    ]
+   },
+   "name": "P15_Sec6"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -6.0
+    ],
+    [
+     0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     6.0
+    ],
+    [
+     3.0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     5.0,
+     4.0
+    ],
+    [
+     5.0,
+     -4.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     3.0,
+     -6.0
+    ],
+    [
+     0,
+     -6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    4.0
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    -4.0
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.loft",
+  "params": {
+   "sections": [
+    {
+     "sketch": "P15_Sec5"
+    },
+    {
+     "sketch": "P15_Sec6"
+    }
+   ],
+   "operation": "new",
+   "body_name": "P15_Pata7",
+   "name": "P15_Pata7"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Pata7"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     13.1477,
+     -340.0,
+     -92.1534
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     0.3107,
+     0.0,
+     0.9505
+    ]
+   },
+   "name": "P15_Sec8"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -9.2168
+    ],
+    [
+     0,
+     9.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     9.2168
+    ],
+    [
+     10.5059,
+     9.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     12.5059,
+     7.2168
+    ],
+    [
+     12.5059,
+     -7.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     10.5059,
+     -9.2168
+    ],
+    [
+     0,
+     -9.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.5059,
+    7.2168
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.5059,
+    -7.2168
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     69.5608,
+     -340.0,
+     -110.592
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     0.3107,
+     0.0,
+     0.9505
+    ]
+   },
+   "name": "P15_Sec9"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -6.0
+    ],
+    [
+     0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     6.0
+    ],
+    [
+     3.0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     5.0,
+     4.0
+    ],
+    [
+     5.0,
+     -4.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     3.0,
+     -6.0
+    ],
+    [
+     0,
+     -6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    4.0
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    -4.0
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.loft",
+  "params": {
+   "sections": [
+    {
+     "sketch": "P15_Sec8"
+    },
+    {
+     "sketch": "P15_Sec9"
+    }
+   ],
+   "operation": "new",
+   "body_name": "P15_Pata10",
+   "name": "P15_Pata10"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Pata10"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     -6.1477,
+     -340.0,
+     -92.1534
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     0.3107,
+     0.0,
+     -0.9505
+    ]
+   },
+   "name": "P15_Sec11"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -9.2168
+    ],
+    [
+     0,
+     9.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     9.2168
+    ],
+    [
+     10.5059,
+     9.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     12.5059,
+     7.2168
+    ],
+    [
+     12.5059,
+     -7.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     10.5059,
+     -9.2168
+    ],
+    [
+     0,
+     -9.2168
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.5059,
+    7.2168
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    10.5059,
+    -7.2168
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": {
+    "origin": [
+     -62.5608,
+     -340.0,
+     -110.592
+    ],
+    "x_dir": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "y_dir": [
+     0.3107,
+     0.0,
+     -0.9505
+    ]
+   },
+   "name": "P15_Sec12"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     -6.0
+    ],
+    [
+     0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0,
+     6.0
+    ],
+    [
+     3.0,
+     6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     5.0,
+     4.0
+    ],
+    [
+     5.0,
+     -4.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     3.0,
+     -6.0
+    ],
+    [
+     0,
+     -6.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    4.0
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.0,
+    -4.0
+   ],
+   "start": "l3.end",
+   "end": "l4.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.loft",
+  "params": {
+   "sections": [
+    {
+     "sketch": "P15_Sec11"
+    },
+    {
+     "sketch": "P15_Sec12"
+    }
+   ],
+   "operation": "new",
+   "body_name": "P15_Pata13",
+   "name": "P15_Pata13"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Pata13"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 20.3,
+   "height": 31.0,
+   "base": [
+    3.5,
+    -328.0,
+    -89.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P15_Cil14",
+   "name": "P15_Cil14"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 16.0,
+   "height": 10.05,
+   "base": [
+    3.5,
+    -338.0,
+    -89.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P15_Cil15",
+   "name": "P15_Cil15"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XY",
+   "name": "P15_Sk16",
+   "offset": "-104.15 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     0.1412,
+     -329.8912
+    ],
+    [
+     2.0075,
+     -328.025
+    ],
+    [
+     4.9925,
+     -328.025
+    ],
+    [
+     6.8588,
+     -329.8912
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.5,
+    -333.25
+   ],
+   "start": "l3.end",
+   "end": "l1.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P15_Sk16",
+   "distance": "8.15 mm",
+   "operation": "new",
+   "body_name": "P15_Lagrima17",
+   "name": "P15_Lagrima17"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P15_Sk18",
+   "offset": "11.65 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -308.5858,
+     -87.5858
+    ],
+    [
+     -307.8,
+     -88.3716
+    ],
+    [
+     -307.8,
+     -89.6284
+    ],
+    [
+     -308.5858,
+     -90.4142
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    -310.0,
+    -89.0
+   ],
+   "start": "l3.end",
+   "end": "l1.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P15_Sk18",
+   "distance": "6.5 mm",
+   "operation": "new",
+   "body_name": "P15_Lagrima19",
+   "name": "P15_Lagrima19"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Cil14"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Cil15"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Lagrima17"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P15_Cil1",
+   "tools": [
+    "P15_Lagrima19"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P15_Cil1",
+   "name": "P15_base"
+  }
+ }
+]

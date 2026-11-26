@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ojo animatrónico</title>
+<style>
+ *{box-sizing:border-box} body{font-family:system-ui,sans-serif;max-width:520px;margin:0 auto;padding:16px;background:#111;color:#eee}
+ h1{font-size:1.3em;margin:0 0 4px} #est{font-size:.9em;color:#aaa;margin-bottom:12px}
+ .barra{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+ button{padding:11px 14px;font-size:1em;border:0;border-radius:8px;background:#2d6cdf;color:#fff}
+ button.off{background:#b03030} button.gris{background:#444} button.peq{padding:6px 10px;font-size:.9em}
+ .servo{background:#1c1c1c;border-radius:12px;padding:14px;margin-bottom:12px;border-left:6px solid var(--c)}
+ .servo h2{font-size:1.15em;margin:0;color:var(--c)} .servo .que{color:#999;font-size:.85em;margin:2px 0 8px}
+ .val{font-size:1.6em;font-weight:600} input[type=range]{width:100%;margin:8px 0}
+ .aj{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:.9em;color:#bbb;margin-top:6px}
+ select{font-size:1em;padding:4px;background:#222;color:#eee;border:1px solid #444;border-radius:6px}
+ .us{margin-left:auto;color:#888}
+</style></head><body>
+<h1>Ojo animatrónico Ø150</h1>
+<div id="est">conectando…</div><p id="aviso" style="color:#ffcc80"></p>
+<div class="barra">
+ <button id="bon" onclick="api('/'+(S.activo?'apagar':'encender'))">Encender servos</button>
+ <button class="gris" onclick="api('/montaje')">Posición de montaje</button>
+ <button class="gris" onclick="api('/centrar')">Mirar al frente</button>
+ <button onclick="api('/parpadear')">Parpadear</button>
+ <button id="bauto" onclick="api('/auto?on='+(S.auto?0:1))">Automático</button>
+</div>
+<div class="barra"><label for="patron">Patrón </label><select id="patron">
+<option value="mezcla">Vigilante natural</option><option value="natural">Parpadeo natural</option><option value="rapido">Parpadeo rápido</option><option value="doble">Parpadeo doble</option><option value="enfadado">Desconfianza</option><option value="busqueda">Búsqueda entrecerrada</option><option value="lado">De lado a lado</option><option value="mareado">Mareado: vueltas</option><option value="repaso">Repaso arriba y abajo</option><option value="curioso">Mirada curiosa</option><option value="atento">Atento: observar un punto</option></select><button onclick="iniciarPatron()">Iniciar patrón</button></div>
+<p style="color:#aaa;font-size:.85em">Vigilante combina miradas, pausas y parpadeos rápidos suaves. Vueltas y barridos son gestos independientes.</p>
+<div class="servo" style="--c:#4ea1ff"><h2>GIRO</h2><div class="que">izquierda ↔ derecha · ±55° con vertical centrada; ±45° a 15° y ±30° a 25°</div>
+ <span class="val" id="v0">0°</span>
+ <input id="s0" type="range" min="-55" max="55" step="1" oninput="mv('giro',this.value)">
+ <div class="aj" id="a0"></div></div>
+
+<div class="servo" style="--c:#47d18c"><h2>CABECEO</h2><div class="que">abajo ↕ arriba</div>
+ <span class="val" id="v1">0°</span>
+ <input id="s1" type="range" min="-25" max="25" step="1" oninput="mv('cabeceo',this.value)">
+ <div class="aj" id="a1"></div></div>
+
+<div class="servo" style="--c:#ffb340"><h2>PÁRPADOS</h2><div class="que">Posición manual: 0–60°</div>
+ <span class="val" id="v2">0°</span>
+ <input id="s2" type="range" min="0" max="60" step="1" oninput="mv('parpado',this.value)">
+ <div class="aj" id="a2"></div></div>
+
+<p style="color:#888;font-size:.85em">Montaje: «Posición de montaje» deja giro y cabeceo al frente y los párpados en 0°. Afina con − / + (se guarda en la placa).</p>
+<script>
+let S={}, arr=false;
+const N=['giro','cabeceo','parpado'];
+function ajustes(){for(let k=0;k<3;k++){document.getElementById('a'+k).innerHTML=
+ 'afinar <button class="peq gris" onclick="aj('+k+',\'centro\','+(S.centro[k]-10)+')">−</button> '+S.centro[k]+' µs'+
+ ' <button class="peq gris" onclick="aj('+k+',\'centro\','+(S.centro[k]+10)+')">+</button>'+
+ ' <button class="peq gris" onclick="aj('+k+',\'sentido\','+(-S.sentido[k])+')">invertir</button>'+
+ ' <label>Canal <select '+(S.activo?'disabled':'')+' onchange="aj('+k+',\'canal\',this.value)">'+Array.from({length:18},(_,i)=>'<option value="'+i+'" '+(S.canal[k]===i?'selected':'')+'>'+(i<16?'PCA '+i:(i===16?'GPIO12':'GPIO14'))+'</option>').join('')+'</select></label>'; }}
+function pinta(e){S=e; if(e.limits){document.getElementById('s1').min=-e.limits.down[3]/10;document.getElementById('s1').max=e.limits.up[3]/10;} document.getElementById("s2").max=e.parpado_max; document.getElementById("aviso").textContent=e.parpado_max<60?"Párpados: máximo "+e.parpado_max+"° por la calibración de pulso actual; comprobar cierre y sentido.":"";
+ document.getElementById('est').textContent=(e.pca?'Placa OK':'⚠ PCA9685 NO DETECTADO')+' · servos '+(e.activo?'ENCENDIDOS':'apagados')+
+  ' · '+(e.seguimiento?'seguimiento cámara':e.auto?'patrón '+e.patron:(e.montaje?'posición de montaje':'manual'));
+ if(e.auto && document.activeElement!==document.getElementById('patron')) document.getElementById('patron').value=e.patron;
+ const b=document.getElementById('bon');b.textContent=e.activo?'Apagar servos':'Encender servos';b.className=e.activo?'off':'';
+ document.getElementById('bauto').textContent=e.auto?'Pasar a manual':'Automático';
+ const v=[e.giro,e.cabeceo,e.parpado];
+ for(let k=0;k<3;k++){if(!arr)document.getElementById('s'+k).value=v[k];document.getElementById('v'+k).textContent=Math.round(v[k])+'°';}
+ ajustes();}
+function api(u){return fetch(u).then(r=>r.json()).then(pinta).catch(()=>{document.getElementById('est').textContent='sin conexión con el ojo';});}
+let pendientes={}, enviando=false, ultimoEnvio=0, temporizador=null;
+function mv(n,v){arr=true;pendientes[n]=v;enviarMovimiento();}
+function enviarMovimiento(){if(enviando||temporizador)return;const espera=Math.max(0,40-(Date.now()-ultimoEnvio));if(espera){temporizador=setTimeout(()=>{temporizador=null;enviarMovimiento()},espera);return;}const cambios=pendientes;pendientes={};const qs=new URLSearchParams(cambios);if(!qs.toString()){arr=false;return;}enviando=true;ultimoEnvio=Date.now();fetch('/mover?'+qs).then(r=>{if(!r.ok)throw Error();return r.json()}).then(pinta).catch(()=>{document.getElementById('est').textContent='sin conexión con el ojo';}).finally(()=>{enviando=false;if(Object.keys(pendientes).length)enviarMovimiento();else arr=false;});}
+function iniciarPatron(){api('/patron?nombre='+encodeURIComponent(document.getElementById('patron').value));}
+function aj(k,c,v){api('/ajuste?eje='+N[k]+'&'+c+'='+v);}
+(function tic(){if(!arr)api('/estado');setTimeout(tic,1500);})();
+</script></body></html>

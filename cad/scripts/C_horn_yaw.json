@@ -1,0 +1,25 @@
+[
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 28.0,
+   "height": 1.8,
+   "base": [
+    0.0,
+    -37.0,
+    0.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "C_h_Cil1",
+   "name": "C_h_Cil1"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "C_h_Cil1",
+   "name": "C_horn_yaw"
+  }
+ }
+]

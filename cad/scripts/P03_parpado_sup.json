@@ -1,0 +1,100 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P03_Sk1"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     71.247,
+     -19.2434
+    ],
+    [
+     72.4055,
+     -19.5563
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -72.4055,
+     -19.5563
+    ],
+    [
+     -71.247,
+     -19.2434
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": "l1.end",
+   "end": "l2.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": "l2.end",
+   "end": "l1.start"
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P03_Sk1",
+   "axis": "X",
+   "angle": "102.0 deg",
+   "operation": "new",
+   "body_name": "P03_LunaRad2",
+   "name": "P03_LunaRad2"
+  }
+ },
+ {
+  "command": "solid.move",
+  "params": {
+   "bodies": [
+    "P03_LunaRad2"
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "angle": "5.0 deg"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P03_LunaRad2",
+   "name": "P03_parpado_sup"
+  }
+ }
+]

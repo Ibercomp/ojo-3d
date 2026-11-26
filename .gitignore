@@ -1,0 +1,12 @@
+# entorno Python local
+.venv/
+__pycache__/
+*.pyc
+# copias y bloqueos de SolidCraft
+cad/sc/*.bak
+cad/sc/.~*.lock
+*.sc.bak
+# PlatformIO
+firmware/.pio/
+# bloqueos de SolidCraft en cualquier carpeta
+.~*.lock

@@ -1,0 +1,435 @@
+{
+  "_info": "Parámetros maestros del ojo animatrónico v1.0. Unidades: mm y grados. Origen O = centro común de todas las esferas. X derecha (mirando al ojo de frente), Y arriba, Z hacia delante (dirección de la mirada). Ángulo α de párpado: desde +Z hacia +Y alrededor del eje X.",
+  "globo": {
+    "R": 68.0,
+    "espesor": 1.6,
+    "z_corte": -26.0,
+    "pupila_D": 42.0,
+    "pupila_pestana_D": 46.0,
+    "pupila_pestana_t": 1.0,
+    "holgura_pupila": 0.15,
+    "nervio_ancho_x": 10.0,
+    "nervio_ancho_z_cara": 24.0,
+    "nervio_sup_y": 33.0,
+    "nervio_inf_y": -37.5,
+    "piloto_M3": 2.6,
+    "piloto_M2": 1.7,
+    "acceso_horn_D": 6.0,
+    "frente_D": 58.0,
+    "iris_trasera_z": 55.0,
+    "iris_pestana_D": 64.0
+  },
+  "parpados": {
+    "inf_Ri": 72.1,
+    "inf_Ro": 73.3,
+    "sup_Ri": 73.8,
+    "sup_Ro": 75.0,
+    "sup_sector": [
+      -5.0,
+      97.0
+    ],
+    "inf_sector": [
+      -95.0,
+      0.0
+    ],
+    "apertura_max": 60.0,
+    "buje_R": 7.5,
+    "eje_D": 4.0,
+    "x_cara_orejas": 79.0,
+    "eje_paso_D": 5.0,
+    "rodamiento_684": [
+      4.0,
+      9.0,
+      4.0
+    ],
+    "rodamiento_alojamiento_D": 9.1,
+    "saliente_palanca_D": 8.0,
+    "espesor": 1.2,
+    "casquete": {
+      "_info": "Casquete polar (opción A): misma esfera que el párpado; junta RADIAL (cono por O) a th_costura del eje X; asiento rebajado bajo el párpado hasta la cara plana x_base",
+      "x_base": 68.4,
+      "holgura_asiento": 0.15,
+      "sup": {
+        "sector": [
+          3.0,
+          97.0
+        ],
+        "x_tope_buje_inf": 73.6,
+        "R_hueco_buje_inf": 8.0,
+        "buje_x": [
+          73.65,
+          79.0
+        ],
+        "th_costura": 15.0,
+        "palanca_x0": 72.0,
+        "tapon_soporte": {
+          "_info": "soporte integrado bajo el buje (pieza suelta en la misma bandeja: se queda en la cama)",
+          "R": 7.6,
+          "hueco_z": 0.2
+        }
+      },
+      "inf": {
+        "sector": [
+          -95.0,
+          0.0
+        ],
+        "x_max": 72.7,
+        "buje_x": [
+          68.45,
+          73.1
+        ],
+        "th_costura": 13.5,
+        "palanca_x0": 71.0,
+        "alivio_pata_elefante": [
+          0.4,
+          0.3
+        ]
+      },
+      "cara_palanca_sup": 80.0,
+      "holgura_canto": 0.15,
+      "chaflan_palanca": {
+        "_info": "bajo el saliente de palanca: cono a 45° (r = r_costura + (x - x_costura_ext - holgura))",
+        "holgura": 0.5
+      }
+    }
+  },
+  "servo": {
+    "_info": "MG90S/SG90. Sistema local: origen en el eje sobre la cara superior del cuerpo; h hacia el eje; l a lo largo del cuerpo (eje desplazado); w ancho. MEDIR EL SERVO REAL.",
+    "l_min": -6.0,
+    "l_max": 16.8,
+    "w": 12.2,
+    "h_cuerpo": 22.7,
+    "pestana_l": [
+      -10.85,
+      21.65
+    ],
+    "pestana_h": [
+      -6.8,
+      -4.3
+    ],
+    "agujeros_pestana_l": [
+      -8.5,
+      19.3
+    ],
+    "cupula_D": 11.8,
+    "cupula_h": 4.0,
+    "horn_h": [
+      7.2,
+      9.0
+    ],
+    "horn_R": 14.0,
+    "holgura": 0.3
+  },
+  "cuna": {
+    "_info": "Cuna de pitch: gira sobre X en O, lleva el servo de yaw (eje -Y) y el globo",
+    "placa_x": [
+      7.0,
+      10.0
+    ],
+    "placa_z": [
+      -10.0,
+      10.0
+    ],
+    "y_min": -26.2,
+    "y_max": 32.0,
+    "bandeja_y": [
+      -26.2,
+      -23.7
+    ],
+    "bandeja_z": [
+      -22.5,
+      11.5
+    ],
+    "barra_sup_y": [
+      27.0,
+      32.0
+    ],
+    "barra_sup_z": [
+      -8.0,
+      8.0
+    ],
+    "rodamiento_623": [
+      3.0,
+      10.0,
+      4.0
+    ],
+    "servo_yaw_y_top": -28.0,
+    "servo_pitch_x_top": 19.3,
+    "paso_cabeza_D": 8.0
+  },
+  "horquilla": {
+    "_info": "Brazos fijos que entran por la boca trasera del globo",
+    "izq_x": [
+      -17.5,
+      -11.5
+    ],
+    "der_x": [
+      26.1,
+      31.1
+    ],
+    "alto_y": 9.0,
+    "z_frente": 13.0,
+    "z_raiz": -83.0
+  },
+  "marco": {
+    "travesano_z": [
+      -95.0,
+      -83.0
+    ],
+    "travesano_y": [
+      -12.0,
+      12.0
+    ],
+    "travesano_x": 94.6,
+    "poste_z": -89.0,
+    "perfil": 20.0,
+    "zocalo_prof": 28.0,
+    "zocalo_y_min": -40.0,
+    "zocalo_z": [
+      -110.4,
+      -83.0
+    ],
+    "poste_x": 3.5,
+    "pie_tornillos_y": 8.5,
+    "canal_cables": {
+      "_info": "canal por la cara delantera del travesaño (junto a la fibra neutra): yaw/pitch bajan por la cara interior de las horquillas, parpadeo desde su soporte; sigue por la pared delantera del nudo P23 hasta el tubo",
+      "y": [
+        -4.5,
+        4.5
+      ],
+      "prof": 4.0,
+      "x": [
+        -16.0,
+        64.0
+      ]
+    }
+  },
+  "movimiento": {
+    "yaw_max": 30.0,
+    "pitch_max": 25.0,
+    "parpado_max": 60.0
+  },
+  "impresion": {
+    "_angulo_max": 45.0,
+    "_luz_puente_max": 30.0,
+    "_voladizo_tolerado_mm2": 60.0,
+    "P01_globo": {
+      "arriba": "+Z",
+      "angulo_max": 66.0,
+      "nota": "boca sobre la cama; cúpula hasta 65°"
+    },
+    "P02_pupila": {
+      "arriba": "+Z"
+    },
+    "P03_parpado_sup": {
+      "arriba": [
+        0,
+        0.99619,
+        0.08716
+      ],
+      "sin_soportes": false,
+      "esbelta_ok": true,
+      "nota": "de canto sobre el borde DELANTERO, el que solapa al cerrar (α=−5°): canto recto y limpio; la cara exterior nunca queda en voladizo (centro de la esfera en la cama); soportes ajustados (snug) solo dentro y borde de 5 mm"
+    },
+    "P04_parpado_inf": {
+      "arriba": [
+        0,
+        -1,
+        0
+      ],
+      "sin_soportes": false,
+      "esbelta_ok": true,
+      "nota": "de canto sobre el borde DELANTERO, el que solapa al cerrar (α=0°): canto recto y limpio; cara exterior sin voladizo; soportes ajustados (snug) solo dentro y borde de 5 mm"
+    },
+    "P05_cuna": {
+      "arriba": "+Y"
+    },
+    "P06_horquilla_izq": {
+      "arriba": "-X"
+    },
+    "P07_horquilla_der": {
+      "arriba": "+X"
+    },
+    "P08_travesano": {
+      "arriba": "-Z",
+      "voladizo_tolerado_mm2": 90.0,
+      "nota": "cara delantera en cama, girado 45° (189 mm no deja margen en cama de 200)",
+      "giro": 45.0
+    },
+    "P13_biela_sup": {
+      "arriba": "+X"
+    },
+    "P14_biela_inf": {
+      "arriba": "+X"
+    },
+    "P15_base": {
+      "arriba": "+Y",
+      "nota": "base en X: patas planas sobre la cama"
+    },
+    "P11_balancin": {
+      "arriba": "-X",
+      "nota": "cara exterior en cama"
+    },
+    "P16_soporte_servo": {
+      "arriba": "-X"
+    },
+    "P17_iris": {
+      "arriba": "+Z"
+    },
+    "P09_brazo_der": {
+      "arriba": "-X",
+      "nota": "cara exterior en cama"
+    },
+    "P10_brazo_izq": {
+      "arriba": "+X",
+      "nota": "cara exterior en cama"
+    },
+    "P19_casquete_sup_der": {
+      "arriba": "+X",
+      "nota": "cara plana en cama; bajo el buje va el tapón de soporte integrado (bandeja), que se queda en la cama"
+    },
+    "P20_casquete_sup_izq": {
+      "arriba": "-X",
+      "nota": "cara plana en cama; bajo el buje va el tapón de soporte integrado (bandeja), que se queda en la cama"
+    },
+    "P21_casquete_inf_der": {
+      "arriba": "+X",
+      "nota": "cara plana en cama, cúpula arriba"
+    },
+    "P22_casquete_inf_izq": {
+      "arriba": "-X",
+      "nota": "cara plana en cama, cúpula arriba"
+    },
+    "_cama": [
+      200,
+      200,
+      200
+    ],
+    "_capa": 0.2,
+    "_linea": 0.4,
+    "_impresora": "Marlin, cama 200×200 (Ender-3 Pro / Anet A8), boquilla 0,4, filamento 1,75",
+    "P99_probeta": {
+      "arriba": "+Z",
+      "nota": "imprimir PRIMERO: ajustes de 684, 623, insertos, pasador y bielas"
+    },
+    "P23_casquillo_poste": {
+      "arriba": "+Y",
+      "nota": "de pie, boca inferior en la cama; ranura del travesaño abierta arriba; tope cónico"
+    }
+  },
+  "parpadeo_v2": {
+    "_info": "Servo trasero + balancín de doble brazo + 2 bielas. Optimizado con herramientas/opt_parpadeo_v2.py",
+    "H": [
+      12.87,
+      -63.51
+    ],
+    "horn_sup": [
+      14.32,
+      -47.11
+    ],
+    "horn_inf": [
+      14.62,
+      -81.83
+    ],
+    "palanca_sup": [
+      17.0,
+      68.94
+    ],
+    "palanca_inf": [
+      16.95,
+      -75.75
+    ],
+    "biela_sup_L": 61.37,
+    "biela_inf_L": 67.26,
+    "recorrido_servo": 73.1,
+    "error_espejo_max": 0.171,
+    "transmision_min": 41.0,
+    "x_biela_sup": [
+      80.4,
+      82.9
+    ],
+    "x_horn": [
+      83.3,
+      85.1
+    ],
+    "x_balancin": [
+      85.1,
+      89.1
+    ],
+    "x_biela_inf": [
+      89.5,
+      92.0
+    ],
+    "biela_ancho": 7.0,
+    "pasador_agujero_D": 3.2,
+    "horn_disco_R": 10.5,
+    "horn_agujeros_r": 7.0,
+    "saliente_balancin_D": 7.5,
+    "soporte_servo_x": [
+      71.8,
+      74.8
+    ]
+  },
+  "insertos": {
+    "_info": "Inserto térmico latón M3 (p.ej. 4,6 x 5,7 mm)",
+    "agujero_D": 4.0,
+    "prof": 6.5,
+    "tornillo_paso_D": 3.4
+  },
+  "poste": {
+    "_info": "Tubo redondo de aluminio estándar; casquillo P23 aparte: nudo con ranura del perfil del travesaño (encaje por forma), 2 M3 de refuerzo",
+    "D": 20.0,
+    "pared": 1.5,
+    "L": 300.0,
+    "holgura": 0.3,
+    "casquillo_prof": 42.0,
+    "casquillo_pared": 4.0,
+    "tope_sobre_tubo": 16.0,
+    "tope_D": 14.0,
+    "nudo_juego": 0.1,
+    "nudo_tornillos_dx": 6.0
+  },
+  "base": {
+    "_info": "Base en X impresa: buje que abraza el tubo y 4 patas en cuña por solevado con aristas superiores redondeadas. Ángulos y longitudes CALCULADOS con `herramientas/estabilidad.py --disenar <vuelco>` a partir del centro de gravedad (todas las poses): el peso cae 35–40 mm por delante del tubo. Salida de cables por detrás",
+    "patas": {
+      "_info": "ang desde +Z hacia +X (simétricas en ±), L = eje del tubo → centro de la punta. Escritas por estabilidad.py --disenar",
+      "vuelco_deg": 15.0,
+      "margen_mm": 74.5,
+      "altura_cdg_mm": 277.9,
+      "delanteras": {
+        "ang": 35.9,
+        "L": 152.8
+      },
+      "traseras": {
+        "ang": 108.1,
+        "L": 63.5
+      }
+    },
+    "ancho_pata_raiz": 18.0,
+    "ancho_pata_punta": 12.0,
+    "alto_buje": 30.0,
+    "camara_cables": {
+      "_info": "bajo el tubo: el tubo apoya en un escalón; los cables salen por la pared del cilindro, por detrás, entre las patas traseras",
+      "alto": 10.0,
+      "D": 16.0,
+      "suelo": 2.0,
+      "salida_D": 9.5
+    },
+    "alto_pata_raiz": 12.0,
+    "alto_pata_punta": 5.0,
+    "redondeo_aristas": 2.0
+  },
+  "brazo": {
+    "placa_x": [
+      94.6,
+      100.6
+    ],
+    "R_pivote": 14.0,
+    "R_raiz": 12.0,
+    "ventana": [
+      -26.0,
+      -66.0,
+      10.0
+    ]
+  }
+}

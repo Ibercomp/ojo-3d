@@ -1,0 +1,181 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P20_Sk1"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": [
+    -68.4,
+    -27.3087
+   ],
+   "end": [
+    -71.1404,
+    -19.062
+   ],
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": [
+    -72.4444,
+    -19.4114
+   ],
+   "end": [
+    -74.8588,
+    -4.6
+   ],
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    "a2.end",
+    [
+     -73.6,
+     -4.6
+    ],
+    [
+     -73.6,
+     -8.0
+    ],
+    [
+     -68.4,
+     -8.0
+    ],
+    "a1.start"
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    "a1.end",
+    "a2.start"
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P20_Sk1",
+   "axis": "X",
+   "angle": "94.0 deg",
+   "operation": "new",
+   "body_name": "P20_Casquete2",
+   "name": "P20_Casquete2"
+  }
+ },
+ {
+  "command": "solid.move",
+  "params": {
+   "bodies": [
+    "P20_Casquete2"
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "angle": "-3.0 deg"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P20_Sk3"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -73.65,
+     -2.6
+    ],
+    [
+     -74.95,
+     -2.6
+    ],
+    [
+     -74.95,
+     -4.55
+    ],
+    [
+     -79.0,
+     -4.55
+    ],
+    [
+     -79.0,
+     -7.5
+    ],
+    [
+     -73.65,
+     -7.5
+    ],
+    [
+     -73.65,
+     -2.6
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P20_Sk3",
+   "axis": "X",
+   "angle": "360.0 deg",
+   "operation": "new",
+   "body_name": "P20_Oreja4",
+   "name": "P20_Oreja4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P20_Casquete2",
+   "tools": [
+    "P20_Oreja4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P20_Casquete2",
+   "name": "P20_casquete_sup_izq"
+  }
+ }
+]

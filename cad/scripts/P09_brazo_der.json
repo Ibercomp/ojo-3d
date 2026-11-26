@@ -1,0 +1,420 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P09_Sk1",
+   "offset": "94.6 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -12.0,
+     -83.5
+    ],
+    [
+     -12.0,
+     -92.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -9.0,
+     -95.0
+    ],
+    [
+     9.0,
+     -95.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     12.0,
+     -92.0
+    ],
+    [
+     12.0,
+     -83.5
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     11.9999,
+     -83.512
+    ],
+    [
+     13.996,
+     -0.3359
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -13.996,
+     -0.3359
+    ],
+    [
+     -11.9999,
+     -83.512
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    -9.0,
+    -92.0
+   ],
+   "start": "l1.end",
+   "end": "l2.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    9.0,
+    -92.0
+   ],
+   "start": "l2.end",
+   "end": "l3.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    11.5,
+    -83.5
+   ],
+   "start": "l3.end",
+   "end": "l4.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0.0,
+    0.0
+   ],
+   "start": "l4.end",
+   "end": "l5.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    -11.5,
+    -83.5
+   ],
+   "start": "l5.end",
+   "end": "l1.start"
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P09_Sk1",
+   "distance": "6.0 mm",
+   "operation": "new",
+   "body_name": "P09_Env2",
+   "name": "P09_Env2"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 7.0,
+   "height": 15.1,
+   "base": [
+    79.5,
+    0.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil3",
+   "name": "P09_Cil3"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Env2",
+   "tools": [
+    "P09_Cil3"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 14.0,
+   "height": 2.2,
+   "base": [
+    92.4,
+    0.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil4",
+   "name": "P09_Cil4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Env2",
+   "tools": [
+    "P09_Cil4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P09_Sk5",
+   "offset": "94.1 mm"
+  }
+ },
+ {
+  "command": "sketch.slot.center_to_center",
+  "params": {
+   "p0": [
+    0,
+    -26.0
+   ],
+   "p1": [
+    0,
+    -66.0
+   ],
+   "width": 10.0
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P09_Sk5",
+   "distance": "7.0 mm",
+   "operation": "new",
+   "body_name": "P09_Ventana6",
+   "name": "P09_Ventana6"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 3.95,
+   "height": 22.6,
+   "base": [
+    79.0,
+    0.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil7",
+   "name": "P09_Cil7"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 3.4,
+   "height": 7.0,
+   "base": [
+    94.1,
+    -6.0,
+    -89.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil8",
+   "name": "P09_Cil8"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 6.5,
+   "height": 3.0,
+   "base": [
+    98.1,
+    -6.0,
+    -89.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil9",
+   "name": "P09_Cil9"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 3.4,
+   "height": 7.0,
+   "base": [
+    94.1,
+    6.0,
+    -89.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil10",
+   "name": "P09_Cil10"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 6.5,
+   "height": 3.0,
+   "base": [
+    98.1,
+    6.0,
+    -89.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil11",
+   "name": "P09_Cil11"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Ventana6",
+   "tools": [
+    "P09_Cil7"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Ventana6",
+   "tools": [
+    "P09_Cil8"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Ventana6",
+   "tools": [
+    "P09_Cil9"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Ventana6",
+   "tools": [
+    "P09_Cil10"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Ventana6",
+   "tools": [
+    "P09_Cil11"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Env2",
+   "tools": [
+    "P09_Ventana6"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 4.55,
+   "height": 0.9,
+   "base": [
+    100.2,
+    0.0,
+    0.0
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P09_Cil12",
+   "name": "P09_Cil12"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P09_Env2",
+   "tools": [
+    "P09_Cil12"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P09_Env2",
+   "name": "P09_brazo_der"
+  }
+ }
+]

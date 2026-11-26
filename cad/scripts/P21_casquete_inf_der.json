@@ -1,0 +1,303 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P21_Sk1"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": [
+    68.4,
+    -22.3213
+   ],
+   "end": [
+    69.962,
+    -16.7964
+   ],
+   "clockwise": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": [
+    71.2747,
+    -17.1115
+   ],
+   "end": [
+    72.7,
+    -9.3595
+   ],
+   "clockwise": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    "a2.end",
+    [
+     72.7,
+     -6.0
+    ],
+    [
+     68.4,
+     -6.0
+    ],
+    "a1.start"
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    "a1.end",
+    "a2.start"
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P21_Sk1",
+   "axis": "X",
+   "angle": "95.0 deg",
+   "operation": "new",
+   "body_name": "P21_Casquete2",
+   "name": "P21_Casquete2"
+  }
+ },
+ {
+  "command": "solid.move",
+  "params": {
+   "bodies": [
+    "P21_Casquete2"
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "angle": "95.0 deg"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P21_Sk3"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     68.45,
+     -4.85
+    ],
+    [
+     68.8,
+     -4.85
+    ],
+    [
+     68.8,
+     -4.55
+    ],
+    [
+     73.1,
+     -4.55
+    ],
+    [
+     73.1,
+     -7.5
+    ],
+    [
+     68.45,
+     -7.5
+    ],
+    [
+     68.45,
+     -4.85
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P21_Sk3",
+   "axis": "X",
+   "angle": "360.0 deg",
+   "operation": "new",
+   "body_name": "P21_Oreja4",
+   "name": "P21_Oreja4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P21_Casquete2",
+   "tools": [
+    "P21_Oreja4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 8.0,
+   "height": 18.5,
+   "base": [
+    71.0,
+    -16.4285,
+    4.1723
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P21_Cil5",
+   "name": "P21_Cil5"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P21_Sk6"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     70.0,
+     -0.5
+    ],
+    [
+     70.0,
+     -15.3368
+    ],
+    [
+     90.5,
+     -35.8368
+    ],
+    [
+     90.5,
+     -0.5
+    ],
+    [
+     70.0,
+     -0.5
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P21_Sk6",
+   "axis": "X",
+   "angle": "50.0 deg",
+   "operation": "new",
+   "body_name": "P21_Casquete7",
+   "name": "P21_Casquete7"
+  }
+ },
+ {
+  "command": "solid.move",
+  "params": {
+   "bodies": [
+    "P21_Casquete7"
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "angle": "100.75 deg"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P21_Cil5",
+   "tools": [
+    "P21_Casquete7"
+   ],
+   "operation": "intersect"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P21_Casquete2",
+   "tools": [
+    "P21_Cil5"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 4.0,
+   "height": 6.8,
+   "base": [
+    83.0,
+    -16.4285,
+    4.1723
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P21_Cil8",
+   "name": "P21_Cil8"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P21_Casquete2",
+   "tools": [
+    "P21_Cil8"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P21_Casquete2",
+   "name": "P21_casquete_inf_der"
+  }
+ }
+]

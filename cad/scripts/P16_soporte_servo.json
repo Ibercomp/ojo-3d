@@ -1,0 +1,390 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P16_Sk1",
+   "offset": "71.8 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -7.0,
+     -80.0
+    ],
+    [
+     7.0,
+     -80.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     7.324,
+     -79.9461
+    ],
+    [
+     34.5998,
+     -70.6055
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     32.17,
+     -56.01
+    ],
+    [
+     4.37,
+     -56.01
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -2.8209,
+     -61.3789
+    ],
+    [
+     -7.9588,
+     -78.7159
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    7.0,
+    -79.0
+   ],
+   "start": "l1.end",
+   "end": "l2.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    32.17,
+    -63.51
+   ],
+   "start": "l2.end",
+   "end": "l3.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    4.37,
+    -63.51
+   ],
+   "start": "l3.end",
+   "end": "l4.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    -7.0,
+    -79.0
+   ],
+   "start": "l4.end",
+   "end": "l1.start"
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P16_Sk1",
+   "distance": "3.0 mm",
+   "operation": "new",
+   "body_name": "P16_Env2",
+   "name": "P16_Env2"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XY",
+   "name": "P16_Sk3",
+   "offset": "-83.0 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     74.8,
+     -12.0
+    ],
+    [
+     64.8,
+     -12.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     60.8,
+     -8.0
+    ],
+    [
+     60.8,
+     8.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     64.8,
+     12.0
+    ],
+    [
+     74.8,
+     12.0
+    ],
+    [
+     74.8,
+     -12.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    64.8,
+    -8.0
+   ],
+   "start": "l1.end",
+   "end": "l2.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    64.8,
+    8.0
+   ],
+   "start": "l2.end",
+   "end": "l3.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P16_Sk3",
+   "distance": "6.0 mm",
+   "operation": "new",
+   "body_name": "P16_RRed4",
+   "name": "P16_RRed4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P16_Env2",
+   "tools": [
+    "P16_RRed4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.fillet",
+  "params": {
+   "edges": [
+    [
+     71.8,
+     0,
+     -77.0
+    ]
+   ],
+   "radius": "4 mm"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 5.0,
+   "width": 23.4,
+   "height": 12.8,
+   "center": [
+    73.3,
+    18.27,
+    -63.51
+   ],
+   "operation": "new",
+   "body_name": "P16_Caja5",
+   "name": "P16_Caja5"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 3.4,
+   "height": 8.0,
+   "base": [
+    65.8,
+    -8.5,
+    -84.0
+   ],
+   "axis": "Z",
+   "operation": "new",
+   "body_name": "P16_Cil6",
+   "name": "P16_Cil6"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 3.4,
+   "height": 8.0,
+   "base": [
+    65.8,
+    8.5,
+    -84.0
+   ],
+   "axis": "Z",
+   "operation": "new",
+   "body_name": "P16_Cil7",
+   "name": "P16_Cil7"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P16_Caja5",
+   "tools": [
+    "P16_Cil6"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P16_Caja5",
+   "tools": [
+    "P16_Cil7"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P16_Env2",
+   "tools": [
+    "P16_Caja5"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 18.0,
+   "base": [
+    59.8,
+    4.37,
+    -63.51
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P16_Cil8",
+   "name": "P16_Cil8"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P16_Env2",
+   "tools": [
+    "P16_Cil8"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 1.7,
+   "height": 18.0,
+   "base": [
+    59.8,
+    32.17,
+    -63.51
+   ],
+   "axis": "X",
+   "operation": "new",
+   "body_name": "P16_Cil9",
+   "name": "P16_Cil9"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P16_Env2",
+   "tools": [
+    "P16_Cil9"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P16_Env2",
+   "name": "P16_soporte_servo"
+  }
+ }
+]

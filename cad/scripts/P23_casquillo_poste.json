@@ -1,0 +1,709 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P23_Sk1",
+   "offset": "3.5 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -54.0,
+     -78.85
+    ],
+    [
+     -54.0,
+     -74.85
+    ],
+    [
+     12.0,
+     -74.85
+    ],
+    [
+     12.0,
+     -88.5
+    ],
+    [
+     -14.0,
+     -88.5
+    ],
+    [
+     -14.0,
+     -82.0
+    ],
+    [
+     -24.85,
+     -82.0
+    ],
+    [
+     -28.0,
+     -78.85
+    ],
+    [
+     -54.0,
+     -78.85
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P23_Sk1",
+   "axis": {
+    "origin": [
+     3.5,
+     0,
+     -89.0
+    ],
+    "dir": [
+     0,
+     1,
+     0
+    ]
+   },
+   "angle": "360 deg",
+   "operation": "new",
+   "body_name": "P23_Casquillo2",
+   "name": "P23_Casquillo2"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 2.0,
+   "height": 0.95,
+   "base": [
+    3.5,
+    -13.95,
+    -89.0
+   ],
+   "axis": "Y",
+   "operation": "new",
+   "body_name": "P23_Cil3",
+   "name": "P23_Cil3"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Cil3"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P23_Sk4",
+   "offset": "-1.5 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -51.0,
+     -102.15
+    ],
+    [
+     -31.0,
+     -102.15
+    ],
+    [
+     -31.0,
+     -106.15
+    ],
+    [
+     -47.0,
+     -106.15
+    ],
+    [
+     -51.0,
+     -102.15
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk4",
+   "distance": "10.0 mm",
+   "operation": "new",
+   "body_name": "P23_Ext5",
+   "name": "P23_Ext5"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Ext5"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P23_Sk6",
+   "offset": "-12.65 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -9.0,
+     -95.1
+    ],
+    [
+     9.0,
+     -95.1
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     12.1,
+     -92.0
+    ],
+    [
+     12.1,
+     -83.5
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     11.5,
+     -82.9
+    ],
+    [
+     -11.5,
+     -82.9
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -12.1,
+     -83.5
+    ],
+    [
+     -12.1,
+     -92.0
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    9.0,
+    -92.0
+   ],
+   "start": "l1.end",
+   "end": "l2.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    11.5,
+    -83.5
+   ],
+   "start": "l2.end",
+   "end": "l3.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    -11.5,
+    -83.5
+   ],
+   "start": "l3.end",
+   "end": "l4.start"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    -9.0,
+    -92.0
+   ],
+   "start": "l4.end",
+   "end": "l1.start"
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk6",
+   "distance": "32.3 mm",
+   "operation": "new",
+   "body_name": "P23_Env7",
+   "name": "P23_Env7"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Env7"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XY",
+   "name": "P23_Sk8",
+   "offset": "-106.65 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     2.0858,
+     -43.4858
+    ],
+    [
+     2.8716,
+     -42.7
+    ],
+    [
+     4.1284,
+     -42.7
+    ],
+    [
+     4.9142,
+     -43.4858
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.5,
+    -44.9
+   ],
+   "start": "l3.end",
+   "end": "l1.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk8",
+   "distance": "8.0 mm",
+   "operation": "new",
+   "body_name": "P23_Lagrima9",
+   "name": "P23_Lagrima9"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XY",
+   "name": "P23_Sk10",
+   "offset": "-106.65 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     2.0858,
+     -33.0858
+    ],
+    [
+     2.8716,
+     -32.3
+    ],
+    [
+     4.1284,
+     -32.3
+    ],
+    [
+     4.9142,
+     -33.0858
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    3.5,
+    -34.5
+   ],
+   "start": "l3.end",
+   "end": "l1.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk10",
+   "distance": "8.0 mm",
+   "operation": "new",
+   "body_name": "P23_Lagrima11",
+   "name": "P23_Lagrima11"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P23_Sk12",
+   "offset": "-7.0 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -5.0,
+     -104.15
+    ],
+    [
+     -5.0,
+     -100.0149
+    ],
+    [
+     5.0,
+     -100.0149
+    ],
+    [
+     9.1351,
+     -104.15
+    ],
+    [
+     -5.0,
+     -104.15
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk12",
+   "distance": "21.0 mm",
+   "operation": "new",
+   "body_name": "P23_Ext13",
+   "name": "P23_Ext13"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XY",
+   "name": "P23_Sk14",
+   "offset": "-100.5149 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -3.7021,
+     1.2021
+    ],
+    [
+     -3.0342,
+     1.87
+    ],
+    [
+     -1.9658,
+     1.87
+    ],
+    [
+     -1.2979,
+     1.2021
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    -2.5,
+    0.0
+   ],
+   "start": "l3.end",
+   "end": "l1.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk14",
+   "distance": "6.0149 mm",
+   "operation": "new",
+   "body_name": "P23_Lagrima15",
+   "name": "P23_Lagrima15"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XY",
+   "name": "P23_Sk16",
+   "offset": "-100.5149 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     8.2979,
+     1.2021
+    ],
+    [
+     8.9658,
+     1.87
+    ],
+    [
+     10.0342,
+     1.87
+    ],
+    [
+     10.7021,
+     1.2021
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    9.5,
+    0.0
+   ],
+   "start": "l3.end",
+   "end": "l1.start",
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk16",
+   "distance": "6.0149 mm",
+   "operation": "new",
+   "body_name": "P23_Lagrima17",
+   "name": "P23_Lagrima17"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "YZ",
+   "name": "P23_Sk18",
+   "offset": "-1.0 mm"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     4.5,
+     -83.2
+    ],
+    [
+     0.2,
+     -78.9
+    ],
+    [
+     -17.0,
+     -78.9
+    ],
+    [
+     -17.0,
+     -86.0
+    ],
+    [
+     4.5,
+     -86.0
+    ],
+    [
+     4.5,
+     -83.2
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.extrude",
+  "params": {
+   "sketch": "P23_Sk18",
+   "distance": "9.0 mm",
+   "operation": "new",
+   "body_name": "P23_Ext19",
+   "name": "P23_Ext19"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Lagrima9"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Lagrima11"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Ext13"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Lagrima15"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Lagrima17"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P23_Casquillo2",
+   "tools": [
+    "P23_Ext19"
+   ],
+   "operation": "cut"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P23_Casquillo2",
+   "name": "P23_casquillo_poste"
+  }
+ }
+]

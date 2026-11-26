@@ -1,0 +1,101 @@
+[
+ {
+  "command": "solid.sphere",
+  "params": {
+   "radius": 68.0,
+   "center": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "operation": "new",
+   "body_name": "P02_Esf1",
+   "name": "P02_Esf1"
+  }
+ },
+ {
+  "command": "solid.box",
+  "params": {
+   "length": 136.0,
+   "width": 136.0,
+   "height": 16.0,
+   "center": [
+    0.0,
+    0.0,
+    61.0
+   ],
+   "operation": "new",
+   "body_name": "P02_Caja2",
+   "name": "P02_Caja2"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P02_Esf1",
+   "tools": [
+    "P02_Caja2"
+   ],
+   "operation": "intersect"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 42.0,
+   "height": 16.5,
+   "base": [
+    0.0,
+    0.0,
+    52.5
+   ],
+   "axis": "Z",
+   "operation": "new",
+   "body_name": "P02_Cil3",
+   "name": "P02_Cil3"
+  }
+ },
+ {
+  "command": "solid.cylinder",
+  "params": {
+   "diameter": 46.0,
+   "height": 2.5,
+   "base": [
+    0.0,
+    0.0,
+    52.5
+   ],
+   "axis": "Z",
+   "operation": "new",
+   "body_name": "P02_Cil4",
+   "name": "P02_Cil4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P02_Cil3",
+   "tools": [
+    "P02_Cil4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P02_Esf1",
+   "tools": [
+    "P02_Cil3"
+   ],
+   "operation": "intersect"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P02_Esf1",
+   "name": "P02_pupila"
+  }
+ }
+]

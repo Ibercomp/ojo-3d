@@ -1,0 +1,177 @@
+[
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P22_Sk1"
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": [
+    -68.4,
+    -22.3213
+   ],
+   "end": [
+    -69.962,
+    -16.7964
+   ],
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.arc.center_point",
+  "params": {
+   "center": [
+    0,
+    0
+   ],
+   "start": [
+    -71.2747,
+    -17.1115
+   ],
+   "end": [
+    -72.7,
+    -9.3595
+   ],
+   "clockwise": true
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    "a2.end",
+    [
+     -72.7,
+     -6.0
+    ],
+    [
+     -68.4,
+     -6.0
+    ],
+    "a1.start"
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    "a1.end",
+    "a2.start"
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P22_Sk1",
+   "axis": "X",
+   "angle": "95.0 deg",
+   "operation": "new",
+   "body_name": "P22_Casquete2",
+   "name": "P22_Casquete2"
+  }
+ },
+ {
+  "command": "solid.move",
+  "params": {
+   "bodies": [
+    "P22_Casquete2"
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "angle": "95.0 deg"
+  }
+ },
+ {
+  "command": "sketch.create",
+  "params": {
+   "plane": "XZ",
+   "name": "P22_Sk3"
+  }
+ },
+ {
+  "command": "sketch.line",
+  "params": {
+   "points": [
+    [
+     -68.45,
+     -4.85
+    ],
+    [
+     -68.8,
+     -4.85
+    ],
+    [
+     -68.8,
+     -4.55
+    ],
+    [
+     -73.1,
+     -4.55
+    ],
+    [
+     -73.1,
+     -7.5
+    ],
+    [
+     -68.45,
+     -7.5
+    ],
+    [
+     -68.45,
+     -4.85
+    ]
+   ],
+   "infer": false
+  }
+ },
+ {
+  "command": "sketch.finish",
+  "params": {}
+ },
+ {
+  "command": "solid.revolve",
+  "params": {
+   "sketch": "P22_Sk3",
+   "axis": "X",
+   "angle": "360.0 deg",
+   "operation": "new",
+   "body_name": "P22_Oreja4",
+   "name": "P22_Oreja4"
+  }
+ },
+ {
+  "command": "solid.combine",
+  "params": {
+   "target": "P22_Casquete2",
+   "tools": [
+    "P22_Oreja4"
+   ],
+   "operation": "join"
+  }
+ },
+ {
+  "command": "body.rename",
+  "params": {
+   "body": "P22_Casquete2",
+   "name": "P22_casquete_inf_izq"
+  }
+ }
+]
